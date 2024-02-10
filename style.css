@@ -1,0 +1,127 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: heading;
+    src: url('edosz.ttf') format('TrueType');
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    max-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),
+            rgba(42, 42, 42, 0.65)), url('images/bg.avif');
+    background-size: cover;
+    position: relative;
+}
+
+aside {
+    width: 18vw;
+    height: 100vh;
+    background-color: rgba(93, 85, 85, 0.1);
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    position: relative;
+    transform: translateX(-18vw);
+    transition: transform 1s ease;
+    /* Added transition for smoother animation */
+}
+
+.menu {
+    position: relative;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: ubuntu, poppins, sans-serif;
+    font-weight: 100;
+}
+
+.menu>h1 {
+    background-color: rgba(67, 67, 67, 0.4);
+    font-family: heading;
+    font-size: 2rem;
+    padding: 0.7rem 0 0.7rem 2rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu i{
+    position: absolute;
+    top: 1.2rem;
+    left: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transform: translateX(18vw);
+    transition: all 0.001s linear;
+}
+
+.menu img {
+    position: absolute;
+    top: 1.5rem;
+    left: calc(18vw - 2rem);
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+menu>img {
+    margin-left: 1.8rem;
+}
+
+li {
+    list-style: none;
+    padding: 1rem 1rem;
+    transition: all 0.2s 0s ease-in-out;
+}
+
+.content {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100vh;
+}
+
+.media {
+    position: absolute;
+    top: calc(100vh - 5rem);
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.media i {
+    padding: 0.5rem;
+    transition: all 0.1s 0s linear;
+}
+
+.media i:hover {
+    transform: scale(1.2);
+    opacity: 0.75;
+}
+
+aside ul li:hover {
+    transform: scale(1.05);
+    border: 0.01rem solid white;
+    box-shadow: rgba(0, 0, 0, 0.05) 2.4px 2.4px 3.2px;
+    opacity: 0.5;
+}
+
+#check {
+    display: none;
+}
+
+body i:hover,
+.menu img:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 2.4px 2.4px 3.2px;
+    opacity: 0.75;
+}
